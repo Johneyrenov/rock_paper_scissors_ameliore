@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre-Papier-Ciseaux</title>
+    <link rel="stylesheet" href="styles.css">
+    <body>
+        <div class="game-container">
+            <h1>Pierre-Papier-Ciseaux</h1>
+            
+            <div class="scores">
+                <div>Joueur: <span id="player-score" class="score">0</span></div>
+                <div>Ordinateur: <span id="computer-score" class="score">0</span></div>
+            </div>
+            
+            <div class="choices">
+                <div class="choice" data-choice="rock">
+                    <img src="/pictures/fist.png" alt="Pierre">
+                </div>
+                <div class="choice" data-choice="paper">
+                    <img src="/pictures/hand-paper.png" alt="Papier">
+                </div>
+                <div class="choice" data-choice="scissors">
+                    <img src="/pictures/scissors.png" alt="Ciseaux">
+                </div>
+            </div>
+            
+            <div class="selections">
+                <div class="selection">
+                    <div>Votre choix</div>
+                    <img id="player-selection" src="/pictures/football-player.png" alt="?">
+                </div>
+                <div class="selection">
+                    <div>Ordinateur</div>
+                    <img id="computer-selection" src="/pictures/robot-assistant.png" alt="?">
+                </div>
+            </div>
+            
+            <div class="result-area">
+                <div id="round-result">Choisissez une option pour commencer!</div>
+                <div id="game-result" class="game-result"></div>
+            </div>
+            
+            <button class="reset-btn">Nouvelle Partie</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>   
