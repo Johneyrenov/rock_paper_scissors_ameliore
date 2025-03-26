@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Éléments du DOM
+    // Elements du DOM
     const choices = document.querySelectorAll('.choice');
     const playerScoreEl = document.getElementById('player-score');
     const computerScoreEl = document.getElementById('computer-score');
@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Images pour les choix
     const choiceImages = {
-        rock: '/pictures/fist.png',
-        paper: '/pictures/hand-paper.png',
-        scissors: '/pictures/scissors.png',
-        default: '/pictures/football-player.png'
+        rock: 'pictures/fist.png',
+        paper: 'pictures/hand-paper.png',
+        scissors: 'pictures/scissors.png',
+        default: 'pictures/football-player.png'
     };
     
     // Fonction pour obtenir un choix aléatoire de l'ordinateur
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Vérifier si le jeu est terminé
+    // Verifier si le jeu est terminé
     function checkGameEnd() {
         if (playerScore >= 5 || computerScore >= 5) {
             gameEnded = true;
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Réinitialiser le jeu
+    // Reinitialiser le jeu
     function resetGame() {
         playerScore = 0;
         computerScore = 0;
@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
         playerSelectionImg.src = choiceImages.default;
         computerSelectionImg.src = choiceImages.default;
         
-        // Réactiver les choix
+        // Reactiver les choix
         choices.forEach(choice => {
             choice.style.opacity = "1";
             choice.style.cursor = "pointer";
         });
     }
     
-    // Écouteurs d'événements
+    // Ecouteurs d'événements
     choices.forEach(choice => {
         choice.addEventListener('click', function() {
             if (gameEnded) return;
